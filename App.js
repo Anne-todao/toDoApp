@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function App() {
-  return (
+export default function App(){
+  return(
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.text}>tarefas</Text>
+      <View style={styles.corVerm}></View>
+      <View style={styles.corAzul}></View>
+      <View style={styles.corVerd}></View>
       <StatusBar style="auto" />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+container:{
+  flex:1,
+  justifyContent:'center',
+  alignItems:'center',
+  flexDirection:'row',
+  gap:10
+},
+  corVerm:{
+    width:50,
+    height:50,
+    backgroundColor:'red',
   },
-});
+  corAzul:{
+    width:50,
+    height:50,
+    backgroundColor:'blue'
+  },
+  corVerd:{
+    width:50,
+    height:50,
+    backgroundColor:'green'
+  },
+})
